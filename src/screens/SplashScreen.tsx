@@ -13,7 +13,7 @@ import {appColors} from '../constants/appColors';
 const SplashScreen = () => {
   return (
     <ImageBackground
-      source={require('../assets/images/backGround.png')}
+      source={require('../assets/images/splash-img.png')}
       style={{
         flex: 1,
         justifyContent: 'center',
