@@ -1,35 +1,36 @@
 import {View, Text, Button} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { ButtonComponent } from '../../components';
+import {ButtonComponent, InputComponent, TextComponent} from '../../components';
+import {globalStyles} from '../../styles/globalStyles';
+import {Lock, LockCircle, Sms} from 'iconsax-react-native';
+import {appColors} from '../../constants/appColors';
+import ContainerComponent from '../../components/ContainerComponent';
 
 const LoginScreen = () => {
-  return (
-    <View style={{}}>
-      <Text
-        style={{
-          justifyContent: 'center',
-          textAlign: 'center',
-          alignItems: 'center',
-          marginTop: 50,
-        }}>
-        LoginScreen
-      </Text>
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-      <Button
-        title="login"
-        onPress={async () => await AsyncStorage.setItem('assetToken', 'aaaaa')}
+  return (
+    <ContainerComponent isImageBackground>
+      <TextComponent text="fafa" flex={0} />
+      {/* <InputComponent
+        value={email}
+        placeholder="Email"
+        onChange={val => setEmail(val)}
+        // isPassword
+        allowClear
+        affix={<Sms size={22} color={appColors.gray} />}
       />
-      <ButtonComponent
-      text='Login'
-      onPress={()=> console.log('login')}
-      icon={
-        <View>
-          <Text>N</Text>
-          </View>
-      }
-      />
-    </View>
+      <InputComponent
+        value={password}
+        placeholder="Password"
+        onChange={val => setPassword(val)}
+        isPassword
+        allowClear
+        affix={<Lock size={22} color={appColors.gray} />}
+      /> */}
+    </ContainerComponent>
   );
 };
 
