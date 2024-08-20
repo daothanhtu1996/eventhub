@@ -12,11 +12,21 @@ import {
 } from '../../components';
 import {appColors} from '../../constants/appColors';
 import SocialLogin from './component/SocicalLogin';
+import authenticationAPI from '../../apis/authApi';
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}: any) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isRemember, setIsRemember] = useState(true);
+
+  const HandleLogin = async () => {
+    try {
+      const res = await authenticationAPI.HandleAuthentication('hello');
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <ContainerComponent isImageBackground isScroll>
@@ -61,24 +71,34 @@ const LoginScreen = () => {
               value={isRemember}
               onChange={() => setIsRemember(!isRemember)}
             />
-            <TextComponent text="Remember me" />
+            <TextComponent styles={{marginLeft: 5}} text="Remember me" />
           </RowComponent>
           <ButtonComponent
             text="Forgot Password?"
-            onPress={() => {}}
+            onPress={() => navigation.navigate('ForgotPassword')}
             type="text"
           />
         </RowComponent>
       </SectionComponent>
       <SpaceComponent height={16} />
       <SectionComponent>
-        <ButtonComponent text="SIGN IN" type="primary" />
+        <ButtonComponent onPress={HandleLogin} text="SIGN IN" type="primary" />
       </SectionComponent>
       <SocialLogin />
       <SectionComponent>
         <RowComponent justify="center">
           <TextComponent text="Don’t have an account? " />
-          <ButtonComponent type="link" text="Sign up" />
+          <ButtonComponent
+            type="link"
+            text="Sign up"
+            onPress={() => navigation.navigate('SignUpScreen')}
+          />
+
+          <ButtonComponent
+            type="link"
+            text="ve"
+            onPress={() => navigation.navigate('Verication')}
+          />
         </RowComponent>
       </SectionComponent>
     </ContainerComponent>

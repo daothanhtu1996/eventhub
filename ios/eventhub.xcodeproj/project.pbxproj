@@ -37,6 +37,7 @@
 		E816DAFA43AF40CFB1E26E57 /* FontAwesome6_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7D31F9A00BE42EB90102FC6 /* FontAwesome6_Regular.ttf */; };
 		E834C6CA8DF44D0481408B18 /* FontAwesome6_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24EF5A7A6F624A24BCD93A65 /* FontAwesome6_Solid.ttf */; };
 		ED4B275A4D2148308F281FF8 /* AirbnbCereal_W_Bk.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8AEB4B2B0C7B4DC583001CE4 /* AirbnbCereal_W_Bk.otf */; };
+		F392CF982C6611D80077F046 /* eventhubTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 00E356EE1AD99517003FC87E /* eventhubTests.xctest */; };
 		FA81F459E839432497EA7D0C /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7EA6027112844A2B6B36DE6 /* AntDesign.ttf */; };
 		FF516E4D06C1427FAAE646C1 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2897DB5E0847A4B95CBA96 /* Entypo.ttf */; };
 /* End PBXBuildFile section */
@@ -330,6 +331,7 @@
 				3D090BAFA67F4326B1A6D274 /* AirbnbCereal_W_Bd.otf in Resources */,
 				ED4B275A4D2148308F281FF8 /* AirbnbCereal_W_Bk.otf in Resources */,
 				C579AD5F73544E6997F31D72 /* AirbnbCereal_W_Blk.otf in Resources */,
+				F392CF982C6611D80077F046 /* eventhubTests.xctest in Resources */,
 				80DF1D09BB114488890514D2 /* AirbnbCereal_W_Lt.otf in Resources */,
 				5A9E53979FE0468ABC26A563 /* AirbnbCereal_W_Md.otf in Resources */,
 				37B8A8C3FD1044538E127CD5 /* AirbnbCereal_W_XBd.otf in Resources */,
@@ -577,6 +579,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = eventhub/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -603,6 +606,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = eventhub/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -689,7 +693,10 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -757,7 +764,10 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
