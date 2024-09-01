@@ -93,12 +93,6 @@ const LoginScreen = ({navigation}: any) => {
             text="Sign up"
             onPress={() => navigation.navigate('SignUpScreen')}
           />
-
-          <ButtonComponent
-            type="link"
-            text="ve"
-            onPress={() => navigation.navigate('Verication')}
-          />
         </RowComponent>
       </SectionComponent>
     </ContainerComponent>
