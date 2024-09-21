@@ -47,13 +47,17 @@ const SignUpScreen = ({navigation}: any) => {
     const passwordValidation = Validate.Password(password);
 
     if (email && password && confirmPassword) {
-      if (emailValidation) {
+      if (emailValidation && passwordValidation) {
         setErrorMessage('');
         setIsLoading(true);
         try {
           const res = await authenticationAPI.HandleAuthentication(
             '/register',
-            values,
+            {
+              fullname: values.username,
+              email,
+              password,
+            },
             'post',
           );
           console.log(res);

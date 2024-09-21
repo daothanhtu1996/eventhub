@@ -17,6 +17,7 @@
     "@react-navigation/native": "^6.1.14",
     "@react-navigation/native-stack": "^6.9.22",
     "axios": "^1.7.3",
+    "bundle-js": "^1.0.3",
     "cors": "^2.8.5",
     "iconsax-react-native": "^0.0.8",
     "query-string": "^9.1.0",

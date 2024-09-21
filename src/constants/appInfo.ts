@@ -7,6 +7,6 @@ export const appInfo = {
   },
   //BASE_URL:'http://172.24.3.143:3001'
 
-  BASE_URL:'http://172.24.2.46:3001'
+  BASE_URL:'http://172.24.0.195:3001'
 
 };
