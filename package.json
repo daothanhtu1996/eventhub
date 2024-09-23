@@ -16,6 +16,7 @@
     "@react-navigation/drawer": "^6.6.11",
     "@react-navigation/native": "^6.1.14",
     "@react-navigation/native-stack": "^6.9.22",
+    "@reduxjs/toolkit": "^2.2.7",
     "axios": "^1.7.3",
     "bundle-js": "^1.0.3",
     "cors": "^2.8.5",
@@ -30,6 +31,8 @@
     "react-native-svg": "^15.1.0",
     "react-native-swiper": "^1.6.0",
     "react-native-vector-icons": "^10.0.3",
+    "react-redux": "^9.1.2",
+    "redux": "^5.0.1",
     "yarn": "^1.22.22"
   },
   "devDependencies": {
